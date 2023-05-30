@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*, *::after, *:before {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff: 'Kumbh Sans', sans-serif;
+  --br: 10px;
+
+  /* Primary */
+  --dark-cyan-clr: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+
+}
+
+body {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-cyan-clr);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: var(--ff); 
+  font-size: 18px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background-image: url('./images/bg-pattern-top.svg'),
+  url('./images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -600px left -750px, 
+                       bottom -600px right -750px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.card{
+  background: #fff;
+  border-radius: var(--br);
+  overflow: hidden;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.card-bg-img {
+  width: 100%;
+  height: 150px;
+}
+
+.card-img {
+  margin-top: -53px ;
+  border-radius: 50%;
+  border: 5px solid #fff; 
+}
+
+.card-name {
+  margin: 1.5rem 0;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--very-dark-blue);
+}
+
+.title > span {
+  color: var(--dark-gray-blue);
+  font-weight: 400;
+}
+
+.city {
+  color: var(--dark-gray-blue);
+  font-size: 1.2rem;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--dark-gray);
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.card-info-number {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.card-info-p {
+  font-size: 12px;
+  color: var(--dark-gray-blue);
+  letter-spacing: 1.5px
+}
+
+@media(min-width: 700px){
+  body:before {
+    background-position: top -450px left -250px, 
+                         bottom -550px right -200px;
+  }
+}
