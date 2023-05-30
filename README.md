@@ -18,8 +18,8 @@
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Website](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/matiasluduena23/profile-card.github.io)
+- Live Site URL: [Website](https://matiasluduena23.github.io/profile-card.github.io/)
 
 ## My process
 
